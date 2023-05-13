@@ -366,7 +366,7 @@ class MDPAgent(Agent):
 		# This does not work in small maps due to the virtue of those maps being far too small
 		# making this function redundant for them
 		foodToCalculate = []
-		for i in range(5):
+		for i in range(10):
 			for x in range(len(ghosts)):
 				# Append coordinates 5 squares east to ghost
 				if (int(ghosts[x][0] + i), int(ghosts[x][1])) not in foodToCalculate:
