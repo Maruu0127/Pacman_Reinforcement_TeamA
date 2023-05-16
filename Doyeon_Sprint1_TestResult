@@ -1,0 +1,35 @@
+"""
+range(1)
+win 1697
+loss 397
+loss -201
+loss -384
+loss -350
+loss -274
+loss 65
+loss -350
+win 1698
+loss -344
+
+win2 loss8
+score avg: 195.4
+win avg: 1697.5
+loss avg: -180
+
+range(10)
+loss 189
+loss -251
+loss -246
+loss 252
+loss -388
+loss -312
+loss 14
+win 1243
+win 1243
+loss -74
+
+win2 loss8
+score avg: 167
+win avg: 1243
+loss avg: -102
+"""
