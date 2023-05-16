@@ -1,0 +1,39 @@
+# Sprint 1 Test Result
+#
+# Range(1)
+# loss -388
+# loss -441
+# loss -141
+# loss -411
+# win 1517
+# loss -198
+# loss -346
+# loss -422
+# loss -97
+# loss 53
+# win rate: 0.1
+# avg score: -98
+# avg win score: 1517
+# avg loss score: 59.7
+# 
+# Range(10)
+# loss -413
+# loss 261
+# win 1302
+# win 1462
+# win 1286
+# win 1267
+# loss -441
+# loss 420
+# loss -214
+# loss -378
+# win rate: 0.4
+# avg score: 455.2
+# avg win score: 1329.3
+# avg loss score: -127.5
+# 
+# 
+# 
+# 
+# 
+# 
