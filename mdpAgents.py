@@ -233,9 +233,9 @@ class MDPAgent(Agent):
 				ghostTime = ghostStates[j][1]
 				#Convert coordinates to int (keys are stored as int, but coordinates from API are stored as float)
 				if ((int(ghosts[j][0])), (int(ghosts[j][1]))) == i:
-					valueMap[i] = -10
-				#elif ((int(ghosts[j][0])), (int(ghosts[j][1]))) == i and ghostTime >= 5:
-				#	valueMap[i] = 5
+					valueMap[i] = -20
+				elif ((int(ghosts[j][0])), (int(ghosts[j][1]))) == i and ghostTime >= 5:
+					valueMap[i] = 5
 
 		return valueMap
 
@@ -368,7 +368,7 @@ class MDPAgent(Agent):
 		# This does not work in small maps due to the virtue of those maps being far too small
 		# making this function redundant for them
 		foodToCalculate = []
-		for i in range(5):
+		for i in range(10):
 			for x in range(len(ghosts)):
 				# Append coordinates 5 squares east to ghost
 				if (int(ghosts[x][0] + i), int(ghosts[x][1])) not in foodToCalculate:
