@@ -1,0 +1,34 @@
+## TaeHoon-Kim Sprint1 TEST RESULT
+
+# Range(1)
+# loss -397
+# loss -300
+# loss -261
+# loss 574
+# loss -145
+# win 1514
+# loss -141
+# loss 69
+# loss -438
+# loss -420
+# ** win1 loss9
+# ** score avg: 5.5
+# ** win avg: 1514
+# ** loss avg: -162.1
+
+# Range(10)
+# win 1283
+# loss 110
+# loss -341
+# win 1481
+# win 1499
+# win 1292
+# loss 375
+# loss -180
+# win 1495
+# win 1481
+
+# ** win6 loss4
+# ** score avg: 849.5
+# ** win avg: 1421.8
+# ** loss avg: -9
