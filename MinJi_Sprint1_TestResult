@@ -1,0 +1,29 @@
+# Range(1)
+# 1. Win 1309
+# 2. Loss -283
+# 3. Loss -412
+# 4. Win 1680
+# 5. Loss -404
+# 6. Loss -289
+# 7. Loss -63
+# 8. Loss -439
+# 9. Loss 395
+# 10. Loss -339
+# Game: 10, Win: 2, Lose: 8
+# Avg Score: 115.5
+# Win Avg: 1494.5, Lose Avg : -229.25
+
+# Range(10)
+# 1. Win 1278
+# 2. Loss -96
+# 3. Loss -388
+# 4. Win 1486
+# 5. Win 1289
+# 6. Loss -406
+# 7. Loss 141
+# 8. Loss 131
+# 9. Loss -428
+# 10. Win 1518
+# Game: 10, Win: 4, Lose: 6
+# Avg Score: 452.5
+# Win Avg: 1392.75, Lose Avg : -174.3
