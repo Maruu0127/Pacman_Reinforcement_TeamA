@@ -70,7 +70,7 @@ class Grid:
 		for i in range(self.height):
 			for j in range(self.width):
 				# print grid elements with no newline
-				print self.grid[i][j],
+				print (self.grid[i][j],)
 			print
 		print
 
@@ -78,7 +78,7 @@ class Grid:
 		for i in range(self.height):
 			for j in range(self.width):
 				# print grid elements with no newline
-				print self.grid[self.height - (i + 1)][j],
+				print (self.grid[self.height - (i + 1)][j],)
 			print
 		print
 
@@ -91,10 +91,12 @@ class MDPAgent(Agent):
 	(i.e. recalculates using valueIteration)
 	Number of loops in valueIteration depends on map size for efficiency. The smaller the map is,
 	the lower the number of loops required.
+	C:\Users\82102\Desktop\23년 1학기\23-1 강의자료\AI소프트웨어공학\텀 프로젝트 - Pacman 강화학습\pacman-mdp-solver-master\pacman-mdp-solver-master
+	./pacman-mdp-solver-master
 	"""
 	# Constructor: this gets run when we first invoke pacman.py
 	def __init__(self):
-		print "Starting up MDPAgent!"
+		print ("Starting up MDPAgent!")
 		name = "Pacman"
 
 		# Store permanent values
@@ -109,9 +111,9 @@ class MDPAgent(Agent):
 	# Gets run after an MDPAgent object is created and once there is
 	# game state to access.
 	def registerInitialState(self, state):
-		print "Running registerInitialState for MDPAgent!"
-		print "I'm at:"
-		print api.whereAmI(state)
+		print ("Running registerInitialState for MDPAgent!")
+		print ("I'm at:")
+		print (api.whereAmI(state))
 
 		# Make map. taken from lab 5 solutions (Parsons, 2017)
 		self.makeMap(state)
@@ -120,7 +122,7 @@ class MDPAgent(Agent):
 
 	# This is what gets run in between multiple games
 	def final(self, state):
-		print "Looks like the game just ended!"
+		print ("Looks like the game just ended!")
 
 		self.visited = []
 		self.foodMap = []
@@ -226,22 +228,14 @@ class MDPAgent(Agent):
 		ghosts = api.ghosts(state)
 		ghostStates = api.ghostStatesWithTimes(state)
 
-		# Proto Sol
-		import math
-		def getDistance(state):
-
-			x1, y1 = api.whereAmI(state)
-			x2, y2 = api.ghosts(state)
-			return math.sqrt((x1 - y1) ** 2 + (y1 - y2) ** 2)
-
 		for i in valueMap.keys():
 			for j in range(len(ghosts)):
 				ghostTime = ghostStates[j][1]
 				#Convert coordinates to int (keys are stored as int, but coordinates from API are stored as float)
 				if ((int(ghosts[j][0])), (int(ghosts[j][1]))) == i:
-					valueMap[i] = -20
-				elif ((int(ghosts[j][0])), (int(ghosts[j][1]))) == i and ghostTime >= 5:
-					valueMap[i] = 5
+					valueMap[i] = -10
+				#elif ((int(ghosts[j][0])), (int(ghosts[j][1]))) == i and ghostTime >= 5:
+				#	valueMap[i] = 5
 
 		return valueMap
 
@@ -374,7 +368,7 @@ class MDPAgent(Agent):
 		# This does not work in small maps due to the virtue of those maps being far too small
 		# making this function redundant for them
 		foodToCalculate = []
-		for i in range(10):
+		for i in range(5):
 			for x in range(len(ghosts)):
 				# Append coordinates 5 squares east to ghost
 				if (int(ghosts[x][0] + i), int(ghosts[x][1])) not in foodToCalculate:
@@ -557,7 +551,7 @@ class MDPAgent(Agent):
 
 	def getAction(self, state):
 
-		print "-" * 30
+		print ("-" * 30)
 		legal = api.legalActions(state)
 		corners = api.corners(state)
 
@@ -576,8 +570,8 @@ class MDPAgent(Agent):
 		else:
 			self.valueIterationSmall(state, 0.2, 0.7, valueMap)
 
-		print "best move: "
-		print self.getPolicy(state, valueMap)
+		print ("best move: ")
+		print (self.getPolicy(state, valueMap))
 
 		# Update values in map with iterations
 		for i in range(self.map.getWidth()):
