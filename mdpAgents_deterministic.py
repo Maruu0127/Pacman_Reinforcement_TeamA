@@ -264,76 +264,42 @@ class MDPAgent(Agent):
 		# else multiply expected utility of just staying in place
 
 		if self.valueMap[north] != "#":
-			n_util = (0.8 * self.valueMap[north])
+			n_util = self.valueMap[north]
 		else:
-			n_util = (0.8 * self.valueMap[stay])
-
-		if self.valueMap[east] != "#":
-			n_util += (0.1 * self.valueMap[east])
-		else:
-			n_util += (0.1 * self.valueMap[stay])
-
-		if self.valueMap[west] != "#":
-			n_util += (0.1 * self.valueMap[west])
-		else:
-			n_util += (0.1 * self.valueMap[stay])
+			n_util = self.valueMap[stay]
 
 		self.util_dict["n_util"] = n_util
 
 
 		# Repeat for the rest of the directions
 		if self.valueMap[south] != "#":
-			s_util = (0.8 * self.valueMap[south])
+			s_util = self.valueMap[south]
 		else:
-			s_util = (0.8 * self.valueMap[stay])
+			s_util = self.valueMap[stay]
 
 		if self.valueMap[east] != "#":
-			s_util += (0.1 * self.valueMap[east])
+			s_util += self.valueMap[east]
 		else:
-			s_util += (0.1 * self.valueMap[stay])
-
-		if self.valueMap[west] != "#":
-			s_util += (0.1 * self.valueMap[west])
-		else:
-			s_util += (0.1 * self.valueMap[stay])
+			s_util += self.valueMap[stay]
 
 		self.util_dict["s_util"] = s_util
 
 
 		if self.valueMap[east] != "#":
-			e_util = (0.8 * self.valueMap[east])
+			e_util = self.valueMap[east]
 		else:
-			e_util = (0.8 * self.valueMap[stay])
-
-		if self.valueMap[north] != "#":
-			e_util += (0.1 * self.valueMap[north])
-		else:
-			e_util += (0.1 * self.valueMap[stay])
-
-		if self.valueMap[south] != "#":
-			e_util += (0.1 * self.valueMap[south])
-		else:
-			e_util += (0.1 * self.valueMap[stay])
+			e_util = self.valueMap[stay]
 
 		self.util_dict["e_util"] = e_util
 
 		if self.valueMap[west] != "#":
-			w_util = (0.8 * self.valueMap[west])
+			w_util = self.valueMap[west]
 		else:
-			w_util = (0.8 * self.valueMap[stay])
-
-		if self.valueMap[north] != "#":
-			w_util += (0.1 * self.valueMap[north])
-		else:
-			w_util += (0.1 * self.valueMap[stay])
-
-		if self.valueMap[south] != "#":
-			w_util += (0.1 * self.valueMap[south])
-		else:
-			w_util += (0.1 * self.valueMap[stay])
+			w_util = self.valueMap[stay]
 
 		self.util_dict["w_util"] = w_util
 
+		
 		# Take the max value in the dictionary of stored utilities
 		# Assign current grid MEU
 		# Return updated valueMap that has transition values
@@ -472,38 +438,73 @@ class MDPAgent(Agent):
 		# else multiply expected utility of just staying in place
 
 		if self.valueMap[north] != "#":
-			n_util = self.valueMap[north]
+			n_util = (0.8 * self.valueMap[north])
 		else:
-			n_util = self.valueMap[stay]
+			n_util = (0.8 * self.valueMap[stay])
+
+		if self.valueMap[east] != "#":
+			n_util += (0.1 * self.valueMap[east])
+		else:
+			n_util += (0.1 * self.valueMap[stay])
+
+		if self.valueMap[west] != "#":
+			n_util += (0.1 * self.valueMap[west])
+		else:
+			n_util += (0.1 * self.valueMap[stay])
 
 		self.util_dict["n_util"] = n_util
 
 
 		# Repeat for the rest of the directions
 		if self.valueMap[south] != "#":
-			s_util = self.valueMap[south]
+			s_util = (0.8 * self.valueMap[south])
 		else:
-			s_util = self.valueMap[stay]
+			s_util = (0.8 * self.valueMap[stay])
 
 		if self.valueMap[east] != "#":
-			s_util += self.valueMap[east]
+			s_util += (0.1 * self.valueMap[east])
 		else:
-			s_util += self.valueMap[stay]
+			s_util += (0.1 * self.valueMap[stay])
+
+		if self.valueMap[west] != "#":
+			s_util += (0.1 * self.valueMap[west])
+		else:
+			s_util += (0.1 * self.valueMap[stay])
 
 		self.util_dict["s_util"] = s_util
 
 
 		if self.valueMap[east] != "#":
-			e_util = self.valueMap[east]
+			e_util = (0.8 * self.valueMap[east])
 		else:
-			e_util = self.valueMap[stay]
+			e_util = (0.8 * self.valueMap[stay])
+
+		if self.valueMap[north] != "#":
+			e_util += (0.1 * self.valueMap[north])
+		else:
+			e_util += (0.1 * self.valueMap[stay])
+
+		if self.valueMap[south] != "#":
+			e_util += (0.1 * self.valueMap[south])
+		else:
+			e_util += (0.1 * self.valueMap[stay])
 
 		self.util_dict["e_util"] = e_util
 
 		if self.valueMap[west] != "#":
-			w_util = self.valueMap[west]
+			w_util = (0.8 * self.valueMap[west])
 		else:
-			w_util = self.valueMap[stay]
+			w_util = (0.8 * self.valueMap[stay])
+
+		if self.valueMap[north] != "#":
+			w_util += (0.1 * self.valueMap[north])
+		else:
+			w_util += (0.1 * self.valueMap[stay])
+
+		if self.valueMap[south] != "#":
+			w_util += (0.1 * self.valueMap[south])
+		else:
+			w_util += (0.1 * self.valueMap[stay])
 
 		self.util_dict["w_util"] = w_util
 
