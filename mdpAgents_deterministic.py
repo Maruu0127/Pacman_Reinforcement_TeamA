@@ -277,11 +277,6 @@ class MDPAgent(Agent):
 		else:
 			s_util = self.valueMap[stay]
 
-		if self.valueMap[east] != "#":
-			s_util += self.valueMap[east]
-		else:
-			s_util += self.valueMap[stay]
-
 		self.util_dict["s_util"] = s_util
 
 
@@ -299,7 +294,6 @@ class MDPAgent(Agent):
 
 		self.util_dict["w_util"] = w_util
 
-		
 		# Take the max value in the dictionary of stored utilities
 		# Assign current grid MEU
 		# Return updated valueMap that has transition values
