@@ -1,0 +1,15 @@
+MyGreedyAgent
+
+1 lost
+2 lost
+3 lost
+4 lost
+5 lost
+6 lost
+7 lost
+8 lost
+9 lost
+10 lost
+
+장점: 매번 state 변이마다 utility값이 갱신되어 모든 move에 대한 utility값을 계산한다.
+단점 : 낭비되는 Move가 심함. food를 먹기 위한 move가 적어 점수 감소가 크다. 생존률이 낮다.
