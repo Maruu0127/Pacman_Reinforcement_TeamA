@@ -1,0 +1,35 @@
+loop 400  win rate: 0.2
+1.loss
+2.win
+3.loss
+4.loss
+5.loss
+6.loss
+7.loss
+8.win
+9.loss
+10.loss
+
+loop 500  win rate 0.3
+1.loss
+2.win
+3.win
+4.loss
+5.loss
+6.win
+7.loss
+8.loss
+9.loss
+10.loss
+
+loop 600  win rate: 0.3
+1.win
+2.win
+3.loss
+4.loss
+5.loss
+6.loss
+7.win
+8.loss
+9.loss
+10.loss
