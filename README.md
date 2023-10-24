@@ -1,4 +1,4 @@
-## A팀 팩맨 MDPAgent 실행방법
+## How to run TeamA Pacman MDPAgent 
 
 1. Download the file 'main'.
 
